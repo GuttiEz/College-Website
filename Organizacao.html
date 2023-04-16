@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planilha de Estudos</title>
+    <div id="header">
+        <div id="menu">
+            <a href="Menu.html"> 
+                 MENU
+            </a>
+        </div>
+    </div>
+    <div id="title">
+   
+        <marquee behavior="alternate" scrollamount="12" hspace="70px"><h1>Bora se organizar Fatecano(a)?</h1></marquee>
+    </div>
+    <style>
+        td:hover,textarea:hover {
+          background-color: #B0C4DE;
+      }
+
+        table, tr, td {
+            border: solid 1px black;
+            border-radius: 2px;
+            color: black;
+            border-collapse : collapse;
+        }
+        td{
+            padding: 2px;
+            box-shadow: 0 0 0.5em #0000CD;
+
+            
+        }
+        th{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+        }
+       
+        .content{
+            border: none;
+            width: 97%;
+            min-width: -webkit-fill-available;
+            min-height: 97%;
+            resize: none;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.3rem;
+            font-weight: 400;
+            align-items: center;
+        }
+        #table{
+            margin-top: 1.5rem;
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
+            overflow-x:auto; 
+            box-shadow: 0 0 0.5em #0000CD
+        }
+        #title{
+            margin-top: 1.5rem;
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+            overflow-x:auto;
+        }
+        #manha, #tarde, #noite{
+            border-bottom-color: transparent;
+            padding-inline: 2px;
+        }
+        h1{
+            /* margin-top: 3%; */
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight:lighter;
+        }
+        #header{
+            height: 4vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+
+      
+        }
+        #menu{
+            /* background-color: rgb(154, 168, 255); */
+            display: flex;
+            align-items: center;
+            width: 50%;
+            height: 100%;
+            justify-content: center;
+
+
+        }
+        #menu a{
+            background-color: rgba(67, 92, 255, 0.149);
+            padding: 10px 20px 10px 20px;
+            border-radius: 20px;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: black;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+        #menu a:hover{
+            cursor: pointer;
+            background-color: rgba(67, 92, 255, 0.704);
+        }
+    </style>
+</head>
+<body>
+
+  <div id="table">
+    <table style="width:100%; height: 30em;">
+        <tr id="days">
+            <th style="border-right: solid 1px black;"></th>
+            <th>DOMINGO</th>
+            <th>SEGUNDA</th>
+            <th>TERÇA</th>
+            <th>QUARTA</th>
+            <th>QUINTA</th>
+            <th>SEXTA</th>
+            <th>SÁBADO</th>
+        </tr>
+        <tr id="manha">
+            <th style="padding-inline: 5px;">MANHÃ</th>
+            <td><textarea class="content"></textarea></td>
+            <td><textarea class="content"></textarea></td>
+            <td><textarea class="content"></textarea></td>
+            <td><textarea class="content"></textarea></td>
+            <td><textarea class="content"></textarea></td>
+            <td><textarea class="content"></textarea></td>
+            <td><textarea class="content"></textarea></td>
+        </tr>
+        <tr id="tarde">
+            <th style="padding-inline: 5px;">TARDE</th>
+            <td><textarea class="content"></textarea></td>
+            <td><textarea class="content"></textarea></td>
+            <td><textarea class="content"></textarea></td>
+            <td><textarea class="content"></textarea></td>
+            <td><textarea class="content"></textarea></td>
+            <td><textarea class="content"></textarea></td>
+            <td><textarea class="content"></textarea></td>
+        </tr>
+        <tr id="noite">
+            <th style="padding-inline: 5px;">NOITE</th>
+            <td><textarea class="content"></textarea></td>
+            <td><textarea class="content"></textarea></td>
+            <td><textarea class="content"></textarea></td>
+            <td><textarea class="content"></textarea></td>
+            <td><textarea class="content"></textarea></td>
+            <td><textarea class="content"></textarea></td>
+            <td><textarea class="content"></textarea></td>
+</tr>
+    </table>
+  </div>
+</body>
+</html>

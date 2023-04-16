@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head href="dicaEstudos.css">
+		<meta charset="utf-8" />
+		<title>Tela de Cadastro</title>
+
+		<style>
+			#fundo {
+				height: 98vh;
+				width: 99vw;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-image: url(./Imagens/fundo.png);
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			#cadastro {
+				background-color: rgba(220, 220, 220, 0.95);
+				overflow-x: auto;
+				overflow-y: hidden;
+				padding: 40px;
+				border-radius: 25px;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-gap: 20px;
+			}
+			input.span {
+				grid-column: 1 / span 4;
+				grid-row: 2;
+			}
+			input.span2 {
+				grid-column: 1 / span 4;
+				grid-row: 3;
+			}
+			input.span3 {
+				grid-column: 1 / span 3;
+				grid-row: 4;
+			}
+			input.span4 {
+				grid-column: 1 / span 3;
+				grid-row: 5;
+			}
+			input.span5 {
+				grid-column: 1 / span 1;
+				grid-row: 6;
+			}
+			input.span6 {
+				grid-column: 2 / span 1;
+				grid-row: 6;
+			}
+			input.span7 {
+				grid-column: 1 / span 1;
+				grid-row: 8;
+			}
+			input.span8 {
+				grid-column: 2 / span 2;
+				grid-row: 8;
+			}
+			img {
+				height: 15vh;
+				display: block;
+				margin: 0px auto;
+			}
+			p {
+				font-size: 1.3rem;
+				color: #394b5a;
+				margin-bottom: 10px;
+			}
+			input {
+				width: 90%;
+				height: 1vh;
+				border-radius: 3rem;
+				border: 1px solid gray;
+				padding: 20px;
+				font-size: 1.2rem;
+				color: rgb(31, 29, 29);
+			}
+			input:hover {
+				background-color: rgb(239, 239, 239);
+			}
+			#button {
+				width: 60%;
+				height: 6vh;
+				border-radius: 3rem;
+				border: 1px solid gray;
+				padding: 20px;
+				font-size: 1.2rem;
+				color: gray;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-color: rgb(0, 98, 98);
+				color: white;
+				font-weight: 400;
+				margin-left: 45%;
+			}
+			a {
+				display: flex;
+				justify-content: center;
+				text-decoration: none;
+				margin-top: 30px;
+			}
+			#button:hover {
+				cursor: pointer;
+				background-color: rgb(1, 42, 42);
+			}
+		</style>
+	</head>
+	<body href="dicaEstudos.css">
+		<div id="fundo">
+			<form name="cadform" action="index.html" method="get">
+				<div id="cadastro">
+					<img src="./Imagens/fatec_widelg-removebg-preview.png"/>
+					<input class="span" type="text" placeholder="Nome"/>
+
+					<input class="span2" type="email" placeholder="E-mail"/>
+
+					<input class="span3" type="text" placeholder="Instituição de Ensino" style="width: 93%;"/>
+
+					<input class="span4" type="text" placeholder="Curso" style="width: 93%;"/>
+
+					<input class="span5" type="number" placeholder="Matricula"/>
+
+					<input class="span6" type="text" placeholder="Período" style="width: 93%;"/>
+
+					<input class="span7" type="password" placeholder="Senha"/>
+
+					<input class="span8" type="password" placeholder="Validar a Senha" style="width: 86%;"/>
+
+					<div>
+						<input id="button" type="submit" onclick="confirmar(); return false" value="CONFIRMAR" style="padding: 0;">
+					</div>
+					
+				</div>
+			</form>
+		</div>
+
+		<script>
+			document.getElementsByTagName("input")[0].select();
+			document.getElementsByTagName("input")[0].focus();
+
+			function confirmar(){
+				for(var ind=0; ind < document.getElementsByTagName("input").length; ind++){
+					if (document.getElementsByTagName("input")[ind].value == "")
+						return alert('Campo "' + document.getElementsByTagName("input")[ind].placeholder + '" é obrigatório!');
+					if (ind==6 || ind==7){
+						if (document.getElementsByTagName("input")[6].value != document.getElementsByTagName("input")[7].value)
+							return alert("As senhas estão diferentes!");
+					}
+				}
+				window.location.href("index.html", 'P1 - Tela de Login');
+			}
+
+		</script>
+
+	</body>
+</html>
